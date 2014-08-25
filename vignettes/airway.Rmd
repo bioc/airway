@@ -34,8 +34,8 @@ and new columns with shorter names and factor levels are added.
 ```{r}
 suppressPackageStartupMessages( library( "GEOquery" ) )
 suppressPackageStartupMessages( library( "airway" ) )
-dir <- system.file("extdata/",package="airway")
-geofile <- paste0(dir, "GSE52778_series_matrix.txt")
+dir <- system.file("extdata",package="airway")
+geofile <- file.path(dir, "GSE52778_series_matrix.txt")
 gse <- getGEO(filename=geofile)
 pdata <- pData(gse)[,grepl("characteristics",names(pData(gse)))]
 names(pdata) <- c("treatment","tissue","ercc_mix","cell","celltype")
@@ -54,7 +54,7 @@ the SRA run id is downloaded from
 **Send to: File** button.
 
 ```{r}
-srafile <- paste0(dir, "SraRunInfo_SRP033351.csv")
+srafile <- file.path(dir, "SraRunInfo_SRP033351.csv")
 srp <- read.csv(srafile)
 srpsmall <- srp[,c("Run","avgLength","Experiment","Sample","BioSample","SampleName")]
 ```
@@ -130,7 +130,7 @@ read counting.
 
 ```{r eval=FALSE}
 sampleTable <- read.csv( "sample_table.csv", row.names=1 )
-fls <- paste0("aligned/",rownames(sampleTable), ".bam")
+fls <- file.path("aligned",rownames(sampleTable), ".bam")
 library( "Rsamtools" )
 bamLst <- BamFileList( fls, yieldSize=2000000 )
 ```
