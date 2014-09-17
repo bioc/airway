@@ -136,16 +136,16 @@ bamLst <- BamFileList( fls, yieldSize=2000000 )
 ```
 
 The following `summarizeOverlaps` call distributed the 8 paired-end
-BAM files to 8 workers. This used a maximum of 10 Gb per worker and
-the time elapsed was 22 minutes.
+BAM files to 8 workers. This used a maximum of 16 Gb per worker and
+the time elapsed was 50 minutes.
 
 ```{r eval=FALSE}
 library( "BiocParallel" )
 register( MulticoreParam( workers=8 ) )
 library( "GenomicAlignments" )
 airway <- summarizeOverlaps( features=exonsByGene, reads=bamLst,
-                            mode="Union", singleEnd=TRUE,
-                            ignore.strand=TRUE, fragments=FALSE )
+                            mode="Union", singleEnd=FALSE,
+                            ignore.strand=TRUE, fragments=TRUE )
 ```
 
 The sample information was then added as column data.
