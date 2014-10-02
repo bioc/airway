@@ -91,15 +91,11 @@ the `.sra` files, using the
 cat files | parallel -j 7 fastq-dump --split-files {}.sra
 ```
 
-The argument `--split-3` was necessary for run SRR1039515, in order to
-obtain two files for the two paired-end reads which had equal number
-of reads.
-
 # Aligning reads
 
-The reads were aligned to the Ensembl release 75 human reference
-genome using the
-[STAR read aligner](https://code.google.com/p/rna-star/):
+The reads were aligned using the 
+[STAR read aligner](https://code.google.com/p/rna-star/) 
+to GRCh37 using the annotations from Ensembl release 75.
 
 ```
 for f in `cat files`; do STAR --genomeDir ../STAR/ENSEMBL.homo_sapiens.release-75 \
