@@ -1,7 +1,7 @@
 Package: airway
 Title: SummarizedExperiment for RNA-Seq in airway smooth muscle cells,
         by Himes et al PLoS One 2014
-Version: 0.101.0
+Version: 0.101.1
 Author: Michael Love
 Maintainer: Michael Love <michaelisaiahlove@gmail.com>
 Description: This package provides a SummarizedExperiment object of
@@ -16,7 +16,7 @@ Description: This package provides a SummarizedExperiment object of
         Glucocorticoid Responsive Gene that Modulates Cytokine Function
         in Airway Smooth Muscle Cells.' PLoS One. 2014 Jun
         13;9(6):e99625. PMID: 24926665. GEO: GSE52778.
-biocViews: ExperimentData, RNAseqData
+biocViews: ExperimentData, SequencingData, RNASeqData, GEO
 License: LGPL
 Depends: R (>= 2.10), GenomicRanges
 Suggests: knitr, GEOquery
