@@ -6,7 +6,7 @@
 # Airway smooth muscle cells
 
 Here we provide the code which was used to contruct the
-*SummarizedExperiment* object of the *airway* experiment data
+*RangedSummarizedExperiment* object of the *airway* experiment data
 package. The experiment citation is:
 
 Himes BE, Jiang X, Wagner P, Hu R, Wang Q, Klanderman B, Whitaker RM,
@@ -154,17 +154,17 @@ Finally, we attached the `MIAME` information using the Pubmed ID.
 
 ```{r eval=FALSE}
 library( "annotate" )
-miame <- SimpleList(pmid2MIAME("24926665"))
+miame <- list(pmid2MIAME("24926665"))
 miame[[1]]@url <- "http://www.ncbi.nlm.nih.gov/pubmed/24926665"
 # because R's CHECK doesn't like non-ASCII characters in data objects
 # or in vignettes. the actual char was used in the first argument
 miame[[1]]@abstract <- gsub("micro","micro",abstract(miame[[1]]))
 miame[[1]]@abstract <- gsub("beta","beta",abstract(miame[[1]]))
-exptData(airway) <- miame
+metadata(airway) <- miame
 save(airway, file="airway.RData")
 ```
 
-# Information on the SummarizedExperiment
+# Information on the RangedSummarizedExperiment
 
 Below we print out some basic summary statistics on the `airway`
 object which is provided by this experiment data package.
@@ -175,7 +175,7 @@ data(airway)
 airway
 as.data.frame(colData(airway))
 summary(colSums(assay(airway))/1e6)
-metadata(rowData(airway))
+metadata(rowRanges(airway))
 ```
 
 # Session information

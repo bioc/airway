@@ -1,11 +1,11 @@
 Package: airway
-Title: SummarizedExperiment for RNA-Seq in airway smooth muscle cells,
+Title: RangedSummarizedExperiment for RNA-Seq in airway smooth muscle cells,
         by Himes et al PLoS One 2014
-Version: 0.103.0
+Version: 0.103.1
 Author: Michael Love
 Maintainer: Michael Love <michaelisaiahlove@gmail.com>
-Description: This package provides a SummarizedExperiment object of
-        read counts in genes for an RNA-Seq experiment on four human
+Description: This package provides a RangedSummarizedExperiment object
+        of read counts in genes for an RNA-Seq experiment on four human
         airway smooth muscle cell lines treated with dexamethasone.
         Details on the gene model and read counting procedure are
         provided in the package vignette. The citation for the
@@ -18,6 +18,6 @@ Description: This package provides a SummarizedExperiment object of
         13;9(6):e99625. PMID: 24926665. GEO: GSE52778.
 biocViews: ExperimentData, SequencingData, RNASeqData, GEO
 License: LGPL
-Depends: R (>= 2.10), GenomicRanges
+Depends: R (>= 2.10), SummarizedExperiment
 Suggests: knitr, GEOquery
 VignetteBuilder: knitr

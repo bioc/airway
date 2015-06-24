@@ -13,7 +13,7 @@
 \usage{
 data("airway")
 }
-\format{SummarizedExperiment}
+\format{RangedSummarizedExperiment}
 \source{FASTQ files from SRA, phenotypic data from GEO}
 \references{Himes BE, Jiang X, Wagner P, Hu R, Wang Q, Klanderman B,
   Whitaker RM, Duan Q, Lasky-Su J, Nikolos C, Jester W, Johnson M,
