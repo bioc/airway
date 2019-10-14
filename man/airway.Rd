@@ -8,7 +8,7 @@
   package vignette. 
 
   The dataset contains four cell lines in two conditions: control and
-  treatment with dexamethasone. 
+  treatment with dexamethasone.
 }
 \usage{
 data("airway")

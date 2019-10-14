@@ -25,6 +25,16 @@ changes in four primary human ASM cell lines that were treated with
 dexamethasone - a potent synthetic glucocorticoid (1 micromolar for 18
 hours)."
 
+**Note:** in version 1.6, the package was updated to include two
+samples, SRR1039508 and SRR1039509, quantified using Salmon, in order
+to demonstrate the tximport/tximeta Bioconductor packages. For details
+on the quantification steps for these files, consult the airway2
+package: <https://github.com/mikelove/airway2>. Another dataset,
+labelled `se` was added to the *airway* package, which contains the
+*SummarizedExperiment* object obtained after loading quantification
+data for all 8 samples into R/Bioconductor using the *tximeta*
+package.
+
 # Obtaining sample information from GEO
 
 The following code chunk obtains the sample information from the
