@@ -18,6 +18,6 @@ Description: This package provides a RangedSummarizedExperiment object
         13;9(6):e99625. PMID: 24926665. GEO: GSE52778.
 biocViews: ExperimentData, SequencingData, RNASeqData, GEO
 License: LGPL
-Depends: R (>= 2.10), SummarizedExperiment
+Depends: R (>= 3.5.0), SummarizedExperiment
 Suggests: knitr, GEOquery
 VignetteBuilder: knitr
