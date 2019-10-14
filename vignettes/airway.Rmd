@@ -30,10 +30,10 @@ samples, SRR1039508 and SRR1039509, quantified using Salmon, in order
 to demonstrate the tximport/tximeta Bioconductor packages. For details
 on the quantification steps for these files, consult the airway2
 package: <https://github.com/mikelove/airway2>. Another dataset,
-labelled `se` was added to the *airway* package, which contains the
+labelled `gse` was added to the *airway* package, which contains the
 *SummarizedExperiment* object obtained after loading quantification
 data for all 8 samples into R/Bioconductor using the *tximeta*
-package.
+package, first running `tximeta` and then `summarizeToGene`.
 
 # Obtaining sample information from GEO
 
