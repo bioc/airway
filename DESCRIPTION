@@ -1,7 +1,7 @@
 Package: airway
 Title: RangedSummarizedExperiment for RNA-Seq in airway smooth muscle cells,
         by Himes et al PLoS One 2014
-Version: 1.7.0
+Version: 1.8.0
 Author: Michael Love
 Maintainer: Michael Love <michaelisaiahlove@gmail.com>
 Description: This package provides a RangedSummarizedExperiment object
