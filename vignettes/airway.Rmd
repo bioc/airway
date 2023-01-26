@@ -188,6 +188,28 @@ summary(colSums(assay(airway))/1e6)
 metadata(rowRanges(airway))
 ```
 
+# Information on the genes
+
+In January 2023, information was added to the `rowData`:
+
+```{r}
+rowData(airway)
+```
+
+This was generated with the following (un-evaluated) code chunk:
+
+```{r eval=FALSE}
+library(AnnotationHub)
+ah <- AnnotationHub()
+Gtf <- query(ah, c("Homo sapiens", "release-75"))[1]
+library(ensembldb)
+DbFile <- ensDbFromAH(Gtf)
+edb <- EnsDb(DbFile)
+g <- genes(edb, return.type="DataFrame")
+rownames(g) <- g$gene_id
+rowData(airway) <- g[rownames(airway),]
+```
+
 # Session information
 
 ```{r}
