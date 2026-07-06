@@ -47,7 +47,8 @@ suppressPackageStartupMessages( library( "airway" ) )
 dir <- system.file("extdata",package="airway")
 geofile <- file.path(dir, "GSE52778_series_matrix.txt")
 gse <- getGEO(filename=geofile)
-pdata <- pData(gse)[,grepl("ch1",names(pData(gse)))]
+# since June 2026, getGEO() returns an SE
+pdata <- rowData(gse)[,grepl("ch1",names(rowData(gse)))]
 names(pdata) <- c("treatment","tissue","ercc_mix","cell","celltype")
 pdataclean <- data.frame(treatment=sub("treatment: (.*)","\\1",pdata$treatment),
                          cell=sub("cell line: (.*)","\\1",pdata$cell),
